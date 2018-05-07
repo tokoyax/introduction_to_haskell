@@ -45,3 +45,11 @@ instance Greeting a => Greeting [a] where
     name = liftGreet name
     hello = liftGreet hello
     bye = liftGreet bye
+
+class Breeding a where
+    breed :: String -> a
+
+instance Breeding Human where
+    breed = Human
+
+
